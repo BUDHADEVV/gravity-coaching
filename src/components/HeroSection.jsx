@@ -11,8 +11,17 @@ const HeroContainer = styled.section`
   align-items: center;
   background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 50%, #3b82f6 100%);
   overflow: hidden;
-  padding-top: 140px;
+  padding-top: 140px; /* Desktop */
+
+  @media (max-width: 1024px) {
+    padding-top: 100px; /* Tablet */
+  }
+  @media (max-width: 640px) {
+    padding-top: 180px; /* Mobile: set to your navbar's mobile height */
+  }
 `;
+
+
 
 const BackgroundImageContainer = styled.div`
   position: absolute;
@@ -394,8 +403,6 @@ const HeroSection = () => {
                   <FaRocket />
                   {homeData.hero.ctaButtons[0].text}
                 </PrimaryButton>
-
-                
               </ButtonGroup>
 
               <StatsGrid variants={itemVariants}>

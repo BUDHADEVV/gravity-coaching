@@ -262,7 +262,7 @@ const Navbar = () => {
                 <FaPhone size={12} />
                 {navigationData.contactInfo.phone}
               </ContactLink>
-              <ContactLink href="mailto:info@gravitycoaching.in">
+              <ContactLink href="mailto:maneeshanil@gmail.com">
                 <FaPhone size={12} />
                 maneeshanil89@gmail.com
               </ContactLink>
@@ -310,7 +310,7 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              CONTACT NOW
+              CONTACT
             </EnrollButton>
             <MobileMenuButton 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
