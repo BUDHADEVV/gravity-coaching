@@ -210,7 +210,7 @@ const StudentCard = styled(motion.div)`
 const StudentImage = styled.div`
   width: 120px;
   height: 120px;
-  background: url('/src/assests/killadi.jpg') center/cover;
+  background: url('/assets/killadi.jpg') center/cover;
   border-radius: 50%;
   margin: 0 auto 1.5rem;
   border: 4px solid #fbbf24;

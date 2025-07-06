@@ -4,10 +4,7 @@ import { FaBars, FaTimes, FaWhatsapp, FaPhone } from 'react-icons/fa';
 import styled from 'styled-components';
 import { navigationData } from '../data/Navigations';
 
-// Import your logo images
-import logograv from '../assests/logograv.png';
-import logogravity from '../assests/logogravity.png';
-
+// Styled Components
 const NavbarContainer = styled.nav`
   position: fixed;
   top: 0;
@@ -144,7 +141,7 @@ const CTASection = styled.div`
   gap: 1rem;
 `;
 
-const EnrollButton = styled.button`
+const EnrollButton = styled.a`
   background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
   color: #1e40af;
   border: none;
@@ -155,6 +152,8 @@ const EnrollButton = styled.button`
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+  text-decoration: none;
+  display: inline-block;
   &:hover {
     transform: translateY(-2px);
     box-shadow: 0 0 30px rgba(251, 191, 36, 0.5);
@@ -282,10 +281,10 @@ const Navbar = () => {
         {/* Main Navigation */}
         <MainNav>
           <LogoSection>
-            {/* First logo (small icon) */}
-            <LogoImageSmall src={logograv} alt="Gravity Symbol" />
-            {/* Main logo (replaces text) */}
-            <LogoImageMain src={logogravity} alt="Gravity Coaching Logo" />
+            {/* Small logo icon */}
+            <LogoImageSmall src="/assets/logograv.png" alt="Gravity Symbol" />
+            {/* Main logo */}
+            <LogoImageMain src="/assets/logogravity.png" alt="Gravity Coaching Logo" />
             <BrandTagline>{navigationData.brand.tagline}</BrandTagline>
           </LogoSection>
 
@@ -306,34 +305,19 @@ const Navbar = () => {
           </DesktopMenu>
 
           <CTASection>
-  <a
-    href={`https://wa.me/91${navigationData.contactInfo.whatsapp}`}
-    target="_blank"
-    rel="noopener noreferrer"
-    style={{
-      background: 'linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%)',
-      color: '#1e40af',
-      border: 'none',
-      padding: '0.75rem 1.5rem',
-      borderRadius: '9999px',
-      fontWeight: 'bold',
-      fontSize: '0.875rem',
-      cursor: 'pointer',
-      transition: 'all 0.3s ease',
-      boxShadow: '0 0 20px rgba(251, 191, 36, 0.3)',
-      textDecoration: 'none',
-      display: 'inline-block'
-    }}
-  >
-    CONTACT NOW
-  </a>
-  <MobileMenuButton 
-    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-  >
-    {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
-  </MobileMenuButton>
-</CTASection>
-
+            <EnrollButton
+              href={`https://wa.me/91${navigationData.contactInfo.whatsapp}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CONTACT NOW
+            </EnrollButton>
+            <MobileMenuButton 
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+            </MobileMenuButton>
+          </CTASection>
         </MainNav>
 
         {/* Mobile Menu */}

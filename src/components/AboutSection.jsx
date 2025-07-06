@@ -360,7 +360,7 @@ const AboutSection = () => {
                   transition={{ duration: 0.3 }}
                 >
                   <StyledImage 
-                    src="src/assests/gravity 2.png" 
+                    src="/assets/gravity 2.png" 
                     alt="Gravity Coaching Students"
                   />
                 </Image1>
@@ -371,7 +371,7 @@ const AboutSection = () => {
                   transition={{ duration: 0.3 }}
                 >
                   <StyledImage 
-                    src="src/assests/final1.png" 
+                    src="/assets/final1.png" 
                     alt="Gravity Faculty and Environment"
                   />
                 </Image2>
