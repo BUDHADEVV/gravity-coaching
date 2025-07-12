@@ -7,14 +7,17 @@ import styled, { keyframes } from 'styled-components';
 const neetJeeKeamImages = [
   './assets/one1.jpg',
   './assets/one2.jpg',
+  './assets/one11.jpg',
+  './assets/one12.jpg',
   './assets/one3.jpg',
   './assets/one4.jpg',
   './assets/one5.jpg',
   './assets/one6.jpg',
-  './assets/one7.jpg',
   './assets/one8.jpg',
   './assets/one9.jpg',
   './assets/one10.jpg',
+  './assets/one11.jpg',
+  './assets/one12.jpg',
   // ...add all NEET/JEE/KEAM result images here
 ];
 
